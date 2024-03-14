@@ -16,8 +16,8 @@ pygame.display.set_caption('doodle') #nome que fica em cima da janela
 background = pygame.image.load('ceu_2.jpeg') #download do cenário
 background = pygame.transform.scale(background,(largura,altura))
 
-player = pygame.image.load('sapinha.webp') #download do jogador
-player = pygame.transform.scale(player,(70,60) )
+player = pygame.image.load('saponormal.png') #download do jogador
+player = pygame.transform.scale(player,(120,100) )
  
 #coordenadas do jogador
 player_x = 170

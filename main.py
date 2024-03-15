@@ -2,7 +2,7 @@ import pygame
 from pygame.locals import *
 from sys import exit 
 from random import randint
-
+#
 pygame.init()
 #biblioteca para facilita o código e não ter que escrever valores todas as vezes 
 marrom = (150,75,0)

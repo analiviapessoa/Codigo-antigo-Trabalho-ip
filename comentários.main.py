@@ -4,7 +4,6 @@ from sys import exit
 from random import randint
 
 pygame.init()
-
 #biblioteca para facilita o código e não ter que escrever valores todas as vezes 
 marrom = (150,75,0)
 largura = 400  
@@ -106,6 +105,5 @@ while True :
     player_x += x_change
     player_y = update_player(player_y) 
     plataforma = update_plataforma(plataforma, player_y, y_change) 
-   
+
     pygame.display.update()
-    

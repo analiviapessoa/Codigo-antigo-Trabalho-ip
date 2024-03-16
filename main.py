@@ -13,7 +13,7 @@ timer = pygame.time.Clock() #para ajustar a velocidade
 tela = pygame.display.set_mode((largura, altura)) 
 pygame.display.set_caption('doodle') #nome que fica em cima da janela
 
-background = pygame.image.load('ceu_2.jpeg') #download do cenário
+background = pygame.image.load('ceu.png') #download do cenário
 background = pygame.transform.scale(background,(largura,altura))
 
 player = pygame.image.load('saponormal.png') #download do jogador

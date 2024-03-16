@@ -13,6 +13,8 @@ font = pygame.font.SysFont('freesansbold.ttf', 16, True, False ) #fonte, tamamnh
 timer = pygame.time.Clock() #para ajustar a velocidade
 tela = pygame.display.set_mode((largura, altura)) #criar tela
 pygame.display.set_caption('doodle') #nome que fica em cima da janela (pesar em um nome pro jogo )
+musica_de_fundo = pygame.mixer.music.load('sapo_nao_lava.mp3') #música de fundo
+pygame.mixer.music.play(-1)
 
 background = pygame.image.load('ceu.png') #download do cenário
 background = pygame.transform.scale(background,(largura,altura))

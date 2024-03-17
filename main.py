@@ -6,6 +6,7 @@ from random import randint
 pygame.init()
 #biblioteca para facilita o código e não ter que escrever valores todas as vezes 
 marrom = (150,75,0)
+ceu = (100,200,200) # cor do ceu inicial
 largura = 400  
 altura = 500
 fps = 100 #frames por segundo 
@@ -16,8 +17,12 @@ pygame.display.set_caption('doodle') #nome que fica em cima da janela (pesar em 
 musica_de_fundo = pygame.mixer.music.load('sapo_nao_lava.mp3') #música de fundo
 pygame.mixer.music.play(-1)
 
-background = pygame.image.load('ceu.png') #download do cenário
+background = pygame.image.load('nuvens_solo.png') #download do cenário
 background = pygame.transform.scale(background,(largura,altura))
+
+regia = pygame.image.load('vitoria_regia.png') #download da vitoria regia
+regia = pygame.transform.scale(regia,(100,100) ) #tamanho da vitoria regia 
+
 
 player = pygame.image.load('sapo.png') #download do jogador
 player = pygame.transform.scale(player,(120,100) ) #alterar o tamanho do personagem 
@@ -70,7 +75,7 @@ def update_plataforma(lista_plataforma, y_pos, change) :
 
 while True :
     timer.tick(fps) #velocidade(quantidade de frames/fps)
-    tela.fill((255,255,255)) #completar a tela com a cor branca (acho que não precisa dessa linha porque já tem um background)
+    tela.fill(ceu) #completar a tela com a cor branca (acho que não precisa dessa linha porque já tem um background)
 
     posicao_cenario_y += velocidade_cenario #velocidade que o backgound sobe
 
@@ -85,6 +90,7 @@ while True :
 
     for c in range(len(plataforma)) : #vai ficar percorrendo a lista de plataformas e desenhando
         block = pygame.draw.rect(tela, marrom, plataforma[c], 0, 3) #gerar a imagem da plataforma 
+        tela.blit(regia, (block)) 
         blocks.append(block) #adicionar cada plataforma a uma lista para adicionar o efeito de 'colisão' a elas
 
     for event in pygame.event.get() : #adicionando as funções as teclas

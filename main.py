@@ -14,10 +14,10 @@ timer = pygame.time.Clock() #para ajustar a velocidade
 tela = pygame.display.set_mode((largura, altura)) #criar tela
 pygame.display.set_caption('doodle') #nome que fica em cima da janela (pesar em um nome pro jogo )
 
-background = pygame.image.load('ceu_2.jpeg') #download do cenário
-background = pygame.transform.scale(background,(largura,altura)) #definir tamanho do background
+background = pygame.image.load('ceu.png') #download do cenário
+background = pygame.transform.scale(background,(largura,altura))
 
-player = pygame.image.load('saponormal.png') #download do jogador
+player = pygame.image.load('sapo.png') #download do jogador
 player = pygame.transform.scale(player,(120,100) ) #alterar o tamanho do personagem 
 player_x = 170 #coordenada x de início da sapa
 player_y = 400 #coordenada y de início da sapa
